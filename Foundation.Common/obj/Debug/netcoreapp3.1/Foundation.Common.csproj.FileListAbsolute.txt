@@ -1,0 +1,9 @@
+D:\Program\PrivateTest\Foundation.Common\bin\Debug\netcoreapp3.1\Foundation.Common.deps.json
+D:\Program\PrivateTest\Foundation.Common\bin\Debug\netcoreapp3.1\Foundation.Common.dll
+D:\Program\PrivateTest\Foundation.Common\bin\Debug\netcoreapp3.1\Foundation.Common.pdb
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.csprojAssemblyReference.cache
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.AssemblyInfoInputs.cache
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.AssemblyInfo.cs
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.csproj.CoreCompileInputs.cache
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.dll
+D:\Program\PrivateTest\Foundation.Common\obj\Debug\netcoreapp3.1\Foundation.Common.pdb

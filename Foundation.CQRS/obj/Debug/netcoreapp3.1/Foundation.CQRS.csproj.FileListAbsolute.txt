@@ -1,0 +1,9 @@
+D:\Program\PrivateTest\Foundation.CQRS\bin\Debug\netcoreapp3.1\Foundation.CQRS.deps.json
+D:\Program\PrivateTest\Foundation.CQRS\bin\Debug\netcoreapp3.1\Foundation.CQRS.dll
+D:\Program\PrivateTest\Foundation.CQRS\bin\Debug\netcoreapp3.1\Foundation.CQRS.pdb
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.AssemblyInfoInputs.cache
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.AssemblyInfo.cs
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.csproj.CoreCompileInputs.cache
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.dll
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.pdb
+D:\Program\PrivateTest\Foundation.CQRS\obj\Debug\netcoreapp3.1\Foundation.CQRS.csprojAssemblyReference.cache

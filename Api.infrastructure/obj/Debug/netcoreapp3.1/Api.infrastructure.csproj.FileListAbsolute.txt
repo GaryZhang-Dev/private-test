@@ -1,0 +1,12 @@
+D:\Program\PrivateTest\Api.infrastructure\bin\Debug\netcoreapp3.1\Api.infrastructure.deps.json
+D:\Program\PrivateTest\Api.infrastructure\bin\Debug\netcoreapp3.1\Api.infrastructure.dll
+D:\Program\PrivateTest\Api.infrastructure\bin\Debug\netcoreapp3.1\Api.infrastructure.pdb
+D:\Program\PrivateTest\Api.infrastructure\bin\Debug\netcoreapp3.1\Foundation.CQRS.dll
+D:\Program\PrivateTest\Api.infrastructure\bin\Debug\netcoreapp3.1\Foundation.CQRS.pdb
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.csprojAssemblyReference.cache
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.AssemblyInfoInputs.cache
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.AssemblyInfo.cs
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.csproj.CoreCompileInputs.cache
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.csproj.CopyComplete
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.dll
+D:\Program\PrivateTest\Api.infrastructure\obj\Debug\netcoreapp3.1\Api.infrastructure.pdb
