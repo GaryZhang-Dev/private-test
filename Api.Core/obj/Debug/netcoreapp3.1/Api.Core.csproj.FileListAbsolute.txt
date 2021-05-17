@@ -1,9 +1,0 @@
-D:\Program\PrivateTest\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.deps.json
-D:\Program\PrivateTest\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.dll
-D:\Program\PrivateTest\Api.Core\bin\Debug\netcoreapp3.1\Api.Core.pdb
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfoInputs.cache
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.AssemblyInfo.cs
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csproj.CoreCompileInputs.cache
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.dll
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.pdb
-D:\Program\PrivateTest\Api.Core\obj\Debug\netcoreapp3.1\Api.Core.csprojAssemblyReference.cache
