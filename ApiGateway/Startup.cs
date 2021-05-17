@@ -15,21 +15,23 @@ using Microsoft.AspNetCore.Cors.Infrastructure;
 using Api.infrastructure;
 using Microsoft.AspNetCore.Http;
 using System.Linq;
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
 
 namespace ApiGateWay
 {
     public class Startup
     {
-        private readonly IHostingEnvironment _env;
+        private readonly IWebHostEnvironment _env;
         public IConfiguration Configuration { get; }
-
-        public Startup(IConfiguration configuration, IHostingEnvironment env)
+        public IContainer ApplicationContainer { get; private set; }
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
             _env = env;
         }
 
-        public void ConfigureServices(IServiceCollection services)
+        public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services.AddCors();
             services.AddSingleton<ICorsPolicyProvider, CorsPolicyProvider>();
@@ -40,14 +42,14 @@ namespace ApiGateWay
             services.AddDataProtection(s => { s.ApplicationDiscriminator = "PrivateTest"; })
                 .PersistKeysToStackExchangeRedis(ConnectionMultiplexer.Connect(Configuration["RedisConfiguration"]), "DP-Keys");
             services.AddOcelot(Configuration).AddPolly();
-            //services.AddAuthentication()
-                //.AddIdentityServerAuthentication("PrivateTestKey", option =>
-                //{
-                //    option.Authority = "localhost://8800";
-                //    option.ApiName = "private";
-                //    option.RequireHttpsMetadata = false;
-                //    option.SupportedTokens = SupportedTokens.Both;
-                //});
+            services.AddAuthentication()
+                .AddIdentityServerAuthentication("AccountServiceKey", option =>
+                {
+                    option.Authority = Configuration["IdentityServerUri"];
+                    option.ApiName = "account-service";
+                    option.RequireHttpsMetadata = false;
+                    option.SupportedTokens = SupportedTokens.Both;
+                });
             services.AddAuthentication()
                 .AddIdentityServerAuthentication("OpenApiServiceKey", option =>
                 {
@@ -64,6 +66,17 @@ namespace ApiGateWay
                     option.RequireHttpsMetadata = false;
                     option.SupportedTokens = SupportedTokens.Both;
                 });
+            this.ApplicationContainer = ConfigureContainer(services);
+
+            return new AutofacServiceProvider(this.ApplicationContainer);
+        }
+
+        private static IContainer ConfigureContainer(IServiceCollection services)
+        {
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+
+            return builder.Build();
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, IApplicationLifetime lifetime)
@@ -71,7 +84,7 @@ namespace ApiGateWay
             app.UseForwardedHeaders(new ForwardedHeadersOptions
             {
                 ForwardedHeaders = ForwardedHeaders.XForwardedFor |
-                                    ForwardedHeaders.XForwardedProto
+                                   ForwardedHeaders.XForwardedProto
             });
             app.UseCors("CorsPolicy");
 

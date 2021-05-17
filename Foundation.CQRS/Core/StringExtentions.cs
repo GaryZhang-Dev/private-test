@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace Foundation.CQRS.Core
+namespace Foundation.Core
 {
     public static class StringExtentions
     {
@@ -14,7 +14,7 @@ namespace Foundation.CQRS.Core
                 return @this;
             }
             var underScores = Regex.Match(@this, @"^_+");
-            return underScores + Regex.Replace(@this, @"([a-z0-9])([A-Z])", "@$1_$2").ToLower();
+            return underScores + Regex.Replace(@this, @"([a-z0-9])([A-Z])", @"$1_$2").ToLower();
         }
     }
 }

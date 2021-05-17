@@ -13,11 +13,7 @@ namespace AccountService.Api
         public static void Main(string[] args)
         {
             WebHost.CreateDefaultBuilder(args)
-                 .UseUrlsForDevelopment("http://*:8955")
-                 //.UseSerilog((hostingContext, loggerConfiguration) =>
-                 //{
-                 //    ApplicationBootstrapper.ConfigureLogging(hostingContext.Configuration, loggerConfiguration);
-                 //})
+                 .UseUrls("http://*:8955")
                  .UseStartup<Startup>().Build().Run();
         }
     }

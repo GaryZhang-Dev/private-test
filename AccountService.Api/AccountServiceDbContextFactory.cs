@@ -1,5 +1,5 @@
 ﻿using AccountService.Domain;
-using Foundation.CQRS.Core;
+using Foundation.Core;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;

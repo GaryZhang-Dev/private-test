@@ -1,20 +1,6 @@
 {
   "Routes": [
-    //{
-    //  "UpstreamPathTemplate": "/OcelotTest1/{url}",
-    //  "UpstreamHttpMethod": [ "post" ],
-    //  "DownstreamPathTemplate": "/api/{url}",
-    //  "DownstreamScheme": "http",
-    //  "DownstreamHostAndPorts": [
-    //    {
-    //      "Host": "localhost",
-    //      "Port": 8000
-    //    }
-    //  ]
-    //},
     {
-      "UpstreamPathTemplate": "/account-service/{url}",
-      "UpstreamHttpMethod": [ "post" ],
       "DownstreamPathTemplate": "/api/{url}",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -22,7 +8,20 @@
           "Host": "localhost",
           "Port": 8955
         }
-      ]
+      ],
+      "UpstreamPathTemplate": "/account-service/{url}",
+      "UpstreamHttpMethod": [ "GET", "Post", "Put", "Delete" ],
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "AccountServiceKey",
+        "AllowedScopes": []
+      },
+      "RateLimitOptions": {
+        "ClientWhitelist": [],
+        "EnableRateLimiting": false,
+        "Period": "1s",
+        "PeriodTimespan": 1,
+        "Limit": 2
+      }
     }
   ]
 }

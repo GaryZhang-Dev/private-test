@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Foudation.CQRS.Data
+namespace Foudation.Data
 {
     public class AbStractDbContext : DbContext
     {

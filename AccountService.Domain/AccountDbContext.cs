@@ -1,6 +1,6 @@
 ﻿using AccountService.Domain.Models;
-using Foudation.CQRS.Data;
-using Foundation.CQRS.Core;
+using Foudation.Data;
+using Foundation.Core;
 using Microsoft.EntityFrameworkCore;
 
 
@@ -39,6 +39,8 @@ namespace AccountService.Domain
             }
         }
         public DbSet<Users> Users { get; set; }
+
+        public DbSet<Books> Books { get; set; }
     }
 
 }

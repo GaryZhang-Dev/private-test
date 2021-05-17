@@ -15,40 +15,77 @@ namespace AccountService.Api.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .HasAnnotation("ProductVersion", "3.1.15")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.5")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AccountService.Domain.Models.Books", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Auther")
+                        .HasColumnName("auther")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("BookName")
+                        .HasColumnName("book_name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnName("created_on")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("LastModifiedOn")
+                        .HasColumnName("last_modified_on")
+                        .HasColumnType("datetime2");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnName("price")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<string>("Published")
+                        .HasColumnName("published")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id")
+                        .HasName("pk_books");
+
+                    b.ToTable("books");
+                });
 
             modelBuilder.Entity("AccountService.Domain.Models.Users", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasColumnName("id");
+                        .HasColumnName("id")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("create@d_on");
+                        .HasColumnName("created_on")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("DisplayName")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("displa@y_name");
+                        .HasColumnName("display_name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedOn")
-                        .HasColumnType("datetime2")
-                        .HasColumnName("las@t_modifie@d_on");
+                        .HasColumnName("last_modified_on")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Password")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("password");
+                        .HasColumnName("password")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Salt")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("salt");
+                        .HasColumnName("salt")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("use@r_name");
+                        .HasColumnName("user_name")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id")
                         .HasName("pk_users");

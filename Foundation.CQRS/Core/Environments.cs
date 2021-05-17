@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Foundation.CQRS.Core
+namespace Foundation.Core
 {
     public static class Environments
     {

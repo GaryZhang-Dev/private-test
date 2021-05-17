@@ -3,10 +3,15 @@ import HelloWorld from '@/components/HelloWorld'
 
 const routes = [
   {
-    path: '/',
-    name: '/',
+    path: '/user',
+    name: '/user',
     component: HelloWorld,
     children: [
+      {
+        path: "login",
+        name: "login",
+        component: () => import("@/views/login.vue")
+      },
       {
         path: "regist-user",
         name: "regist-user",

@@ -12,7 +12,7 @@ export default {
         pro: "https://openapi-test.chinalife-gsjy.com/"
     },
     apiGateway: {
-        dev: "https://localhost:8900/",
+        dev: "http://localhost:8900/",
         pro: "https://localhost:8900/"
     },
     getWechatAuthCode: redirectUri => {

@@ -1,4 +1,4 @@
-﻿using Foundation.CQRS.Core;
+﻿using Foundation.Core;
 using Microsoft.AspNetCore.Hosting;
 using System;
 using System.Collections.Generic;

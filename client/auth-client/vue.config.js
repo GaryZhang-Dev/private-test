@@ -50,7 +50,7 @@ module.exports = {
 
     devServer: {
         port: 8999,
-        https: true,
+        https: false,
         hotOnly: false,
         proxy: null, // 设置代理
         before: app => { }

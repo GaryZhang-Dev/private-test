@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { PasswordLogin, PhoneNumberLogin2 } from '@/api/authService'
+import { PasswordLogin, GetClient } from '@/api/authService'
 export default {
   data() {
     return {
@@ -30,12 +30,14 @@ export default {
   methods: {
     async Login() {
       console.log(1111)
+      // var response = await GetClient({ returnUrl: 'localhost' })
       var response = await PasswordLogin({
         ...this.command,
         returnUrl: this.$route.query.ReturnUrl,
         // ticket: res.ticket,
         code: this.$route.query.code,
       })
+      window.location.replace(response.returnUrl)
     },
     onRegist() {
       console.log(this.$route)
