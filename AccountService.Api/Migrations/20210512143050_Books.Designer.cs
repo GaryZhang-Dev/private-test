@@ -33,15 +33,15 @@ namespace AccountService.Api.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("BookName")
-                        .HasColumnName("boo@k_name")
+                        .HasColumnName("book_name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnName("create@d_on")
+                        .HasColumnName("created_on")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime>("LastModifiedOn")
-                        .HasColumnName("las@t_modifie@d_on")
+                        .HasColumnName("last_modifie@d_on")
                         .HasColumnType("datetime2");
 
                     b.Property<decimal>("Price")
@@ -66,15 +66,15 @@ namespace AccountService.Api.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedOn")
-                        .HasColumnName("create@d_on")
+                        .HasColumnName("created_on")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DisplayName")
-                        .HasColumnName("displa@y_name")
+                        .HasColumnName("display_name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("LastModifiedOn")
-                        .HasColumnName("las@t_modifie@d_on")
+                        .HasColumnName("last_modifie@d_on")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Password")
@@ -86,7 +86,7 @@ namespace AccountService.Api.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UserName")
-                        .HasColumnName("use@r_name")
+                        .HasColumnName("user_name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id")

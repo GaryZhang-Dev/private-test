@@ -2,12 +2,12 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
-    <ul>
-      <!-- <li><router-link :to='{name:"test"}'>Test</router-link></li> -->
+    <!-- <ul>
+      <li><router-link :to='{name:"test"}'>Test</router-link></li>
       <li>
         <router-link :to="{name:'login-password'}">Login</router-link>
       </li>
-    </ul>
+    </ul>-->
     <router-view></router-view>
   </div>
 </template>

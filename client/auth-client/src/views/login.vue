@@ -18,6 +18,7 @@ export default {
       response.clientId === 'myprivate.test.client' ||
       response.clientId === 'myprivate.test.oa.client'
     ) {
+      debugger
       this.$router.push({
         name: 'login-password',
         query: { ...this.$route.query },

@@ -18,6 +18,7 @@ export default {
       })
       let user = await applicationUserManager.signinRedirectCallback()
       Toast.clear()
+      debugger
       window.location.replace(user.state.return_uri)
     } catch (e) {
       console.log(e)

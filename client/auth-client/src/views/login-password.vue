@@ -31,6 +31,7 @@ export default {
     async Login() {
       console.log(1111)
       // var response = await GetClient({ returnUrl: 'localhost' })
+      debugger
       var response = await PasswordLogin({
         ...this.command,
         returnUrl: this.$route.query.ReturnUrl,

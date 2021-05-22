@@ -28,7 +28,7 @@ export default {
     async TestAction() {
       console.log(1111)
       var response = await Test({
-        returnUrl: this.$route.path,
+        returnUrl: this.$route.query.returnUrl,
         // ticket: res.ticket,
       })
       console.log(response)

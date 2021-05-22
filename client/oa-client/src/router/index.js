@@ -5,19 +5,17 @@ const routes = [
   {
     path: '/',
     name: '/',
-    redirect: "/first/page",
-    component: HelloWorld,
-    children: [
-      {
-        path: "first/page",
-        name: "first-page",
-        meta: {
-          title: "SEO测试",
-          requiresAuth: true,
-        },
-        component: () => import("@/views/first-request.vue")
-      },
-    ]
+    redirect: "/first-page",
+    // component: HelloWorld,
+  },
+  {
+    path: "/first-page",
+    name: "first-page",
+    meta: {
+      title: "SEO测试",
+      requiresAuth: true,
+    },
+    component: () => import("@/views/first-request.vue")
   },
   {
     path: "/signout",
@@ -35,9 +33,14 @@ const routes = [
     component: () => import("@/views/signout-callback.vue"),
   },
 ];
-
+routes.forEach((route) => {
+  if (!route.path) {
+    route.path = route.path || "/" + (route.name || "");
+  }
+});
 const router = createRouter({
   history: createWebHistory(),
+  base: process.env.BASE_URL,
   routes,
 });
 

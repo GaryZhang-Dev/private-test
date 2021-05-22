@@ -8,6 +8,7 @@ using IdentityServer4;
 using IdentityServer4.Events;
 using IdentityServer4.Services;
 using IdentityServer4.Stores;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -59,10 +60,13 @@ namespace AuthClient.Controllers
 
             message = "登录成功";
 
-
+            
             await _events.RaiseAsync(new UserLoginSuccessEvent(user.UserName, user.Id.ToString(), user.UserName));
-            await HttpContext.SignInAsync(new IdentityServerUser(user.Id.ToString()));
-            return Ok(request.ReturnUrl);
+            await HttpContext.SignInAsync(new IdentityServerUser(user.Id.ToString())
+            {
+                DisplayName = user.UserName
+            });
+            return Ok(new { request.ReturnUrl });
         }
 
         [HttpPost("auth/register-user")]

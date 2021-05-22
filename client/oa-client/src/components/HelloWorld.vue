@@ -4,9 +4,9 @@
     <h2>Essential Links</h2>
     <ul>
       <!-- <li><router-link :to='{name:"test"}'>Test</router-link></li> -->
-      <li>
+      <!-- <li>
         <router-link :to="{name:'first-page'}">test</router-link>
-      </li>
+      </li>-->
     </ul>
     <router-view></router-view>
   </div>

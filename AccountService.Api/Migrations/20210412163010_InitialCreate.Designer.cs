@@ -30,15 +30,15 @@ namespace AccountService.Api.Migrations
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2")
-                        .HasColumnName("create@d_on");
+                        .HasColumnName("created_on");
 
                     b.Property<string>("DisplayName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("displa@y_name");
+                        .HasColumnName("display_name");
 
                     b.Property<DateTime>("LastModifiedOn")
                         .HasColumnType("datetime2")
-                        .HasColumnName("las@t_modifie@d_on");
+                        .HasColumnName("last_modifie@d_on");
 
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)")
@@ -50,7 +50,7 @@ namespace AccountService.Api.Migrations
 
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(max)")
-                        .HasColumnName("use@r_name");
+                        .HasColumnName("user_name");
 
                     b.HasKey("Id")
                         .HasName("pk_users");

@@ -15,6 +15,7 @@ class ApplicationUserManager extends UserManager {
   }
   // this.Log.logger = console;
   async login() {
+    debugger
     await this.signinRedirect({ state: { return_uri: window.location.href } });
   }
 

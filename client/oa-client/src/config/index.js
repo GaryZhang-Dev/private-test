@@ -14,7 +14,7 @@ export default {
      */
     apiGateway: {
         dev: "http://localhost:8800/",
-        pro: "https://api-test.chinalife-gsjy.com/",
+        pro: "https://42.192.14.125/",
     },
     auth: {
         dev: {
@@ -23,9 +23,9 @@ export default {
             post_logout_redirect_uri: "http://localhost:8086/signout-callback/",
         },
         pro: {
-            authority: "https://passport-test.chinalife-gsjy.com",
-            redirect_uri: "https://platform-oa-test.chinalife-gsjy.com/signin-callback/",
-            post_logout_redirect_uri: "https://platform-oa-test.chinalife-gsjy.com/signout-callback/",
+            authority: "https://42.192.14.125:443/",
+            redirect_uri: "https://42.192.14.125/signin-callback/",
+            post_logout_redirect_uri: "https://42.192.14.125/signout-callback/",
         },
     },
     /**
